@@ -1,18 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-interface Rating {
-  rate: number;
-  count: number;
-}
-
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  image: string;
-  rating: Rating;
-}
+import { Product } from '../../types/types';
 
 export const productsApi = createApi({
   reducerPath: 'productsApi',

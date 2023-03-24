@@ -5,6 +5,7 @@ import {
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import './Home.scss';
 import { Link } from 'react-router-dom';
+import { useTitle } from '../hooks/useTitle';
 
 interface Product2 {
   id: number;
@@ -13,6 +14,7 @@ interface Product2 {
 }
 
 export default function Home() {
+  useTitle('Home | Knock');
   const { data, error, isLoading } = useGetAllProductsQuery();
   return (
     <>

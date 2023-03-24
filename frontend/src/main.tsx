@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {
+  Navigate,
+  useNavigate,
   createBrowserRouter,
   Route,
+  useLocation,
   createRoutesFromElements,
   RouterProvider,
+  RouteProps,
 } from 'react-router-dom';
+import parse from 'query-string';
 
 import { store } from './app/store';
 import { Provider } from 'react-redux';
@@ -20,10 +25,10 @@ import Cart from './pages/Cart';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route path='/' element={<Home />}></Route>
-      <Route path='*' element={<NotFound />}></Route>
-      <Route path='/products/:productId' element={<ProductPage />}></Route>
-      <Route path='/cart' element={<Cart />}></Route>
+      <Route index element={<Home />} />
+      <Route path='*' element={<NotFound />} />
+      <Route path='/products/:productId' element={<ProductPage />} />
+      <Route path='/cart' element={<Cart />} />
     </Route>
   )
 );
