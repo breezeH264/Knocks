@@ -1,10 +1,37 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom';
+
+import { store } from './app/store';
+import { Provider } from 'react-redux';
+
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import ProductPage from './pages/ProductPage';
+import Cart from './pages/Cart';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout />}>
+      <Route path='/' element={<Home />}></Route>
+      <Route path='*' element={<NotFound />}></Route>
+      <Route path='/products/:productId' element={<ProductPage />}></Route>
+      <Route path='/cart' element={<Cart />}></Route>
+    </Route>
+  )
+);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>
+);
