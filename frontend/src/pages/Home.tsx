@@ -14,7 +14,7 @@ interface Product2 {
 }
 
 export default function Home() {
-  useTitle('Home | Knock');
+  useTitle('Home | Knocks.app');
   const { data, error, isLoading } = useGetAllProductsQuery();
   return (
     <>

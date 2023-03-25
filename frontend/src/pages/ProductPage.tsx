@@ -17,7 +17,11 @@ const ProductPage = () => {
 
   const { id, title, description, image, price, rating } = singleProduct ?? {};
 
-  useTitle(`${singleProduct?.title} | Knock`);
+  if (title !== undefined) {
+    useTitle(`${singleProduct?.title} | Knocks.app`);
+  } else {
+    useTitle('Knocks.app Page Not Found');
+  }
 
   if (isLoading) {
     return <p>Loading...</p>;
