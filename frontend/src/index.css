@@ -9,6 +9,14 @@
   padding: 0;
 }
 
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
-  background-color: #242424;
+  background-color: #eeeded;
 }

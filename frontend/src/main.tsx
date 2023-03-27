@@ -15,6 +15,7 @@ import parse from 'query-string';
 
 import { store } from './app/store';
 import { Provider } from 'react-redux';
+import { Toaster } from 'react-hot-toast';
 
 import Layout from './layout/Layout';
 import Home from './pages/Home';
@@ -38,5 +39,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
+    <Toaster position='top-center' reverseOrder={false} />
   </React.StrictMode>
 );

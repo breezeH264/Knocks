@@ -5,7 +5,10 @@ interface ProductState {
   title: string;
 }
 
-const initialState = { items: [], title: '' } as ProductState;
+const initialState = {
+  items: [],
+  title: '',
+} as ProductState;
 
 const productSlice = createSlice({
   name: 'product',
