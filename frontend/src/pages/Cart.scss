@@ -1,0 +1,20 @@
+.cart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart__thumbnail {
+  width: 150px;
+}
+
+.cart__headings,
+.cart__product {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid black;
+}
+
+.cart__details {
+  display: flex;
+}
