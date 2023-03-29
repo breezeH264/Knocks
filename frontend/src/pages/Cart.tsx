@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useAppSelector } from '../app/hooks';
 import './Cart.scss';
 
+import { Product } from '../types/types';
+
 import {
   addToCart,
   decreaseQuantity,
@@ -16,11 +18,11 @@ export default function Cart() {
 
   const dispatch = useAppDispatch();
 
-  const handleAddToCart = (product: any) => {
+  const handleAddToCart = (product: Product) => {
     dispatch(addToCart(product));
   };
 
-  const handleDecreaseQuantity = (product: any) => {
+  const handleDecreaseQuantity = (product: Product) => {
     dispatch(decreaseQuantity(product));
   };
 
@@ -28,11 +30,11 @@ export default function Cart() {
     dispatch(clearCart(product));
   };
 
-  const handleDeleteItem = (product: any) => {
+  const handleDeleteItem = (product: Product) => {
     dispatch(deleteItem(product));
   };
 
-  useTitle('Cart | Knock.app');
+  useTitle('Cart | Knocks.app');
   return (
     <>
       <div className='cart__header'>
@@ -61,7 +63,7 @@ export default function Cart() {
                 <button onClick={() => handleDecreaseQuantity(cartProduct)}>
                   -
                 </button>
-                <span>{cartProduct.cartTotalItems}</span>
+                <span>{cartProduct.itemQuantity}</span>
                 <button onClick={() => handleAddToCart(cartProduct)}>+</button>
               </div>
               <div>
@@ -71,7 +73,7 @@ export default function Cart() {
               </div>
             </section>
             <section>
-              <p>Total :${cartProduct.price * cartProduct.cartTotalItems}</p>
+              <p>Total :${cartProduct.price * cartProduct.itemQuantity}</p>
               <p>
                 <em>${cartProduct.price} per item</em>
               </p>
@@ -80,6 +82,7 @@ export default function Cart() {
         ))}
       </div>
       <span>Subtotal: </span>
+      <span>{cart.cartPrice}</span>
     </>
   );
 }

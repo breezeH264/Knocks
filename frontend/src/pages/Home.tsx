@@ -20,7 +20,11 @@ export default function Home() {
             <Link key={product.id} to={`/products/${product.id}`}>
               <div className='product'>
                 <h3>{product.title}</h3>
-                <img src={product.image} className='product__thumbnail' />
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className='product__thumbnail'
+                />
               </div>
             </Link>
           ))}

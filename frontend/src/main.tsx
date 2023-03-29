@@ -2,16 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {
-  Navigate,
-  useNavigate,
   createBrowserRouter,
   Route,
-  useLocation,
   createRoutesFromElements,
   RouterProvider,
-  RouteProps,
 } from 'react-router-dom';
-import parse from 'query-string';
 
 import { store } from './app/store';
 import { Provider } from 'react-redux';
@@ -39,6 +34,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
-    <Toaster position='top-center' reverseOrder={false} />
+    <Toaster position='bottom-left' reverseOrder={false} />
   </React.StrictMode>
 );
