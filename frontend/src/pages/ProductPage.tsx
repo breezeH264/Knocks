@@ -23,7 +23,7 @@ const ProductPage = () => {
 
   const { id, title, description, image, price, rating } = singleProduct ?? {};
 
-  useTitle('Products | Knocks.app');
+  useTitle('Products | Knocks.');
 
   const handleAddToCart = (product: any) => {
     dispatch(addToCart(product));

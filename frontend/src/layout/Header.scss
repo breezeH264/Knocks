@@ -1,3 +1,47 @@
 header {
-  background-color: lightblue;
+  font-family: var(--paragraph-font);
+  padding: 1rem 0;
+}
+
+.logo {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 2rem;
+  user-select: none;
+}
+
+.header__container {
+  padding: 0 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__search {
+  border: 1px solid grey;
+  border-radius: 8px;
+  height: 40px;
+  width: 20rem;
+  padding: 10px 16px;
+  margin-right: 24px;
+  background-color: var(--product-color);
+}
+
+.nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.header__cart {
+  font-size: 1.5rem;
+}
+
+.cart__quantity {
+  font-family: var(--heading-font);
+  color: var(--black);
+  padding: 0.25rem;
+  position: absolute;
 }

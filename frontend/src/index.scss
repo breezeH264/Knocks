@@ -1,0 +1,58 @@
+:root {
+  background-color: #fefefe;
+  color: var(--black);
+  --heading-font: 'MontrealBold';
+  --primary-color: #eb3749;
+  --white: #fdfdfd;
+  --black: #212121;
+  --paragraph-font: 'Montreal';
+  --transition: all 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  --product-color: #f8f8f8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+a,
+p {
+  font-family: var(--paragraph-font);
+}
+
+@font-face {
+  font-family: 'Montreal';
+  src: url('./assets/fonts/PPNeueMontreal-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MontrealBold';
+  src: url('./assets/fonts/PPNeueMontreal-Bold.woff') format('woff');
+}
+
+* {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}

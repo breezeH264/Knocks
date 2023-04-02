@@ -34,7 +34,7 @@ export default function Cart() {
     dispatch(deleteItem(product));
   };
 
-  useTitle('Cart | Knocks.app');
+  useTitle('Cart | knocks.');
   return (
     <>
       <div className='cart__header'>

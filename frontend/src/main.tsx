@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import {
   createBrowserRouter,
   Route,
@@ -14,6 +14,7 @@ import { Toaster } from 'react-hot-toast';
 
 import Layout from './layout/Layout';
 import Home from './pages/Home';
+import AllProducts from './pages/AllProducts';
 import NotFound from './pages/NotFound';
 import ProductPage from './pages/ProductPage';
 import Cart from './pages/Cart';
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
       <Route index element={<Home />} />
+      <Route path='/products/' element={<AllProducts />} />
       <Route path='*' element={<NotFound />} />
       <Route path='/products/:productId' element={<ProductPage />} />
       <Route path='/cart' element={<Cart />} />
