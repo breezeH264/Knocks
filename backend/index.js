@@ -10,7 +10,7 @@ app.use(cors());
 app.get('/', (req, res) => {
   res.send('welcome to hell');
 });
-app.get('/api/products', (req, res) => {
+app.get('/products', (req, res) => {
   res.send(products);
 });
 
