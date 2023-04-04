@@ -13,6 +13,7 @@ import {
   faWandMagicSparkles,
   faMasksTheater,
   faPeopleGroup,
+  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -116,7 +117,7 @@ export default function Home() {
       <section className='new__container'>
         <div className='new__header'>
           <h2>Latest Releases</h2>
-          <Link to='/products'>VIEW ALL</Link>
+          <Link to='/products'>View All</Link>
         </div>
         <Slider {...settings}>
           <div>
@@ -172,13 +173,26 @@ export default function Home() {
       </section>
       <section className='offer'>
         <div className='offer__container'>
-          <div className='offer__left'></div>
-          <div className='offer__right'>
-            <p>LIMITED TIME OFFER</p>
-            <p>20% </p>
+          <div className='offer__content'>
+            <div className='offer__left'>
+              <img src='https://knockshop-media.s3.amazonaws.com/Email_Sign_Up_4.webp' />
+            </div>
+            <div className='offer__right'>
+              <span>LIMITED TIME OFFER</span>
+              <p>
+                20% off today's order
+                <br />
+                and free shipping
+              </p>
+              <button className='offer_btn'>
+                <FontAwesomeIcon icon={faArrowRight} className='link__cart' />
+                More details
+              </button>
+            </div>
           </div>
         </div>
       </section>
+      <section className='mystery'></section>
     </>
   );
 }

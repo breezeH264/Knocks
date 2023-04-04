@@ -42,9 +42,9 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <section>
+        <section className='search'>
           <input className='header__search'></input>
-          <NavLink to='/cart'>
+          <NavLink to='/cart' className='cart__icon'>
             <FontAwesomeIcon icon={faCartShopping} className='header__cart' />
             <span className='cart__quantity'>{cartQuantity}</span>
           </NavLink>

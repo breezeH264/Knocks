@@ -15,7 +15,7 @@ export default function Footer() {
       <div className='footer__container'>
         <section className='footer__top'>
           <div>
-            <img className='footer__logo' src='../../public/knocks-icon.png' />
+            <img className='footer__logo' src='./knocks-icon.png' />
             <p className='footer__quote'>just a knock(s.) off</p>
 
             <p>

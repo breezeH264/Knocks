@@ -3,6 +3,7 @@
   color: var(--black);
   --heading-font: 'MontrealBold';
   --primary-color: #eb3749;
+  --off-white: #b3b3b3;
   --white: #fdfdfd;
   --black: #212121;
   --paragraph-font: 'Montreal';
@@ -19,8 +20,8 @@ h6 {
   font-family: var(--heading-font);
 }
 
-a,
-p {
+p,
+span {
   font-family: var(--paragraph-font);
 }
 
@@ -55,4 +56,8 @@ a:active {
 
 ul {
   list-style-type: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
