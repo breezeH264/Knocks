@@ -5,12 +5,12 @@ import { Product } from '../../types/types';
 export const productsApi = createApi({
   reducerPath: 'productsApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:6969',
+    baseUrl: 'https://api.knocks.app',
   }),
 
   endpoints: builder => ({
     getAllProducts: builder.query<Product[], void>({
-      query: () => 'api/products',
+      query: () => '/products',
     }),
   }),
 });
