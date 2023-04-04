@@ -152,23 +152,20 @@
 }
 
 .find {
-  background-color: var(--primary-color);
   @include center-section;
-  padding: 2.5rem 0;
-  overflow: hidden;
-}
-
-.test {
-  //width: 100%;
-  max-height: 75vh;
+  padding: 0 4rem;
 }
 
 .find__container {
-  max-width: 90rem;
-  padding: 0 4rem;
-  width: 100%;
+  background-color: var(--primary-color);
   position: relative;
   z-index: 2;
+  overflow: hidden;
+  padding: 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 90rem;
+  width: 100%;
 }
 
 .find__content {
@@ -180,6 +177,7 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
+  border-radius: 10rem;
 }
 
 .find__quote {
